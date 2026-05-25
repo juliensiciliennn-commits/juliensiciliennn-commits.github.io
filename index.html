@@ -224,7 +224,7 @@
     .stage-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; justify-content: center; }
     .week-tab { background: var(--bg2); border: 1px solid var(--line); border-radius: 30px; padding: 0.5rem 1rem; font-family: var(--mono); font-size: 0.7rem; cursor: pointer; transition: all 0.2s; color: var(--t2); }
     .week-tab.active { background: var(--acc-mid); border-color: var(--acc); color: var(--acc); }
-    .week-detail { background: var(--bg1); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 1.5rem; margin-bottom: 1.5rem; min-height: 220px; }
+    .week-detail { background: var(--bg1); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 1.5rem; margin-bottom: 1.5rem; min-height: 260px; }
     .week-title { font-size: 1.2rem; font-weight: 500; margin-bottom: 0.75rem; color: var(--acc); }
     .week-desc { color: var(--t2); line-height: 1.7; }
     .stage-coord { background: var(--bg2); border-radius: var(--r-lg); padding: 1rem 1.5rem; border-left: 3px solid var(--acc); margin-top: 1rem; }
@@ -407,8 +407,8 @@
           <div class="stage-nav" id="weekNav"></div>
           <div class="week-detail" id="weekDetail"></div>
           <div class="stage-coord">
-            <div class="coord-name">👤 Tuteur de stage : M. DUPONT (Responsable infrastructure)</div>
-            <div>📞 Téléphone : 04 77 00 00 00 · ✉️ contact@cti-talaudiere.fr</div>
+            <div class="coord-name">👤 Tuteur de stage : PATRICIA BEAU (Responsable infrastructure)</div>
+            <div>📞 Téléphone : 04 77 00 00 00 · ✉️ p.beau@cti-talaudiere.fr</div>
             <div>📍 CTI La Talaudière – 12 Rue de l'Innovation, 42350 La Talaudière</div>
           </div>
         </div>
@@ -549,15 +549,15 @@
         tick();
       }
 
-      // Stage weeks
+      // Stage weeks (Semaine 1 détaillée selon votre résumé)
       const weeks = [
-        { title: "Semaine 1 — Prise en main", desc: "Accueil au CTI La Talaudière, découverte de l'équipe, inventaire du parc informatique, premiers tickets d'assistance." },
-        { title: "Semaine 2 — Support N1/N2", desc: "Gestion des tickets via GLPI, résolution de pannes matérielles/logicielles, accompagnement utilisateurs." },
-        { title: "Semaine 3 — Administration système", desc: "Création de comptes Active Directory, gestion des GPO, déploiement de logiciels, jonction au domaine." },
-        { title: "Semaine 4 — Réseau & VLAN", desc: "Configuration des switchs Cisco, mise en place de VLANs, routage inter-VLAN, optimisation DHCP/DNS." },
-        { title: "Semaine 5 — Sécurité & maintenance", desc: "Audit des mises à jour, renforcement des règles firewall, vérification des sauvegardes." },
-        { title: "Semaine 6 — Virtualisation", desc: "Déploiement de serveurs virtualisés (VMware/VirtualBox), snapshots, gestion des ressources." },
-        { title: "Semaine 7 — Bilan et documentation", desc: "Rédaction des documentations techniques, présentation des réalisations, évaluation de stage." }
+        { title: "Semaine 1 — Prise en main & découverte", desc: "Accueil au CTI La Talaudière : visite des bureaux, présentation du personnel et découverte de l'identité de l'entreprise. Aux côtés de ma tutrice Patricia Beau, j'ai observé ses journées de travail et appris les différents domaines d'activité du service. Découverte du système de tickets clients, de l'intranet, des logiciels internes et des nombreuses abréviations propres à l'environnement. Prise en main des outils utilisés par l'équipe, notamment Ansible pour l'automatisation, et compréhension de l'organisation autour des réunions d'équipe." },
+        { title: "Semaine 2 — Support N1/N2 & prise en main outils", desc: "Gestion des tickets via GLPI, résolution de pannes matérielles/logicielles, accompagnement utilisateurs. Prise en main des outils de ticketing et début de l'assistance de niveau 1 et 2." },
+        { title: "Semaine 3 — Administration système & Active Directory", desc: "Création de comptes Active Directory, gestion des GPO, déploiement de logiciels, jonction de postes au domaine. Premières manipulations sur les serveurs Windows Server." },
+        { title: "Semaine 4 — Réseau & VLAN", desc: "Configuration des switchs Cisco, mise en place de VLANs, routage inter-VLAN, optimisation DHCP/DNS. Découverte des règles de sécurité réseau." },
+        { title: "Semaine 5 — Sécurité & maintenance préventive", desc: "Audit des mises à jour, renforcement des règles firewall, vérification des sauvegardes, sensibilisation utilisateurs." },
+        { title: "Semaine 6 — Virtualisation & serveurs", desc: "Déploiement de serveurs virtualisés (VMware/VirtualBox), snapshots, gestion des ressources, tests de reprise après sinistre." },
+        { title: "Semaine 7 — Bilan et documentation", desc: "Rédaction des documentations techniques internes, présentation des réalisations à l'équipe, évaluation de stage et perspectives." }
       ];
       const weekNav = document.getElementById('weekNav');
       const weekDetail = document.getElementById('weekDetail');
@@ -607,7 +607,7 @@
         });
       }
 
-      // Social links placeholders
+      // Social links placeholders (à remplacer par vos vrais liens)
       const linkedin = document.getElementById('linkedinLink');
       const linkedinC = document.getElementById('linkedinContact');
       const github = document.getElementById('githubLink');
