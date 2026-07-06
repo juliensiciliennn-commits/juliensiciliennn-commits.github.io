@@ -233,9 +233,15 @@
     /* Veille */
     .veille-content { background: var(--bg1); border-radius: var(--r-lg); padding: 1.8rem; border: 1px solid var(--line); }
     .veille-content h3 { color: var(--acc); margin-bottom: 1rem; }
+    .veille-content .veille-intro { color: var(--t2); line-height: 1.8; margin-bottom: 1.2rem; }
     .tech-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
     .stech { font-family: var(--mono); font-size: .65rem; text-transform: uppercase; color: var(--t3); background: var(--bg2); border: 1px solid var(--line); border-radius: 20px; padding: .22rem .8rem; }
-    .veille-note { margin-top: 1.2rem; background: var(--bg2); padding: 0.8rem 1rem; border-radius: var(--r); font-size: 0.85rem; }
+    .veille-articles { display: flex; flex-direction: column; gap: 0.8rem; margin: 1.2rem 0; }
+    .veille-article { background: var(--bg2); border-radius: var(--r); padding: 0.8rem 1.2rem; border-left: 2px solid var(--acc); }
+    .veille-article .date { font-family: var(--mono); font-size: .6rem; color: var(--t3); text-transform: uppercase; }
+    .veille-article .title { font-weight: 500; color: var(--t1); margin: 0.2rem 0; }
+    .veille-article .summary { font-size: .82rem; color: var(--t2); }
+    .veille-note { margin-top: 1.5rem; background: var(--acc-dim); padding: 0.8rem 1rem; border-radius: var(--r); font-size: 0.85rem; border: 1px dashed var(--line-hi); color: var(--t2); }
 
     /* Contact */
     .contact__grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: start; }
@@ -407,23 +413,57 @@
           <div class="stage-nav" id="weekNav"></div>
           <div class="week-detail" id="weekDetail"></div>
           <div class="stage-coord">
-            <div class="coord-name">👤 Tuteur de stage : PATRICIA BEAU (Responsable infrastructure)</div>
-            <div>📞 Téléphone : 04 77 00 00 00 · ✉️ p.beau@cti-talaudiere.fr</div>
-            <div>📍 CTI La Talaudière – 12 Rue de l'Innovation, 42350 La Talaudière</div>
+            <div class="coord-name">👤 Tuteur de stage : PATRICIA BEAU</div>
+            <div>✉️ patricia.beau@assurance-maladie.fr</div>
+            <div>📍 CTI La Talaudière – 866 Rue des Fraisses, 42350 La Talaudière</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- VEILLE TECHNOLOGIQUE -->
+    <!-- VEILLE TECHNOLOGIQUE - STARLINK -->
     <section class="section veille" id="veille">
       <div class="container">
-        <div class="sec-head reveal"><p class="sec-label">// 05</p><h2 class="sec-title">Veille : Starlink</h2></div>
+        <div class="sec-head reveal"><p class="sec-label">// 05</p><h2 class="sec-title">Veille technologique : Starlink</h2></div>
         <div class="veille-content reveal delay-1">
           <h3>🚀 Starlink – Constellation satellite de SpaceX</h3>
-          <p>Starlink vise à fournir un accès internet haut débit mondial via des satellites en orbite basse (LEO). Enjeux : latence réduite, couverture étendue, impact sur les infrastructures terrestres. Cette veille suit les évolutions techniques, déploiement et cybersécurité.</p>
-          <div class="tech-tags"><span class="stech">Satellite LEO</span><span class="stech">Phased Array</span><span class="stech">Low latency</span><span class="stech">Déploiement France</span></div>
-          <p class="veille-note">📡 Section à enrichir prochainement : actualités, concurrence OneWeb, performances en zone rurale.</p>
+          <p class="veille-intro">
+            Starlink est un projet de constellation de satellites en orbite basse (LEO) développé par SpaceX,
+            visant à fournir un accès internet haut débit et à faible latence à l'échelle mondiale.
+            Cette veille technologique suit les évolutions du projet, ses performances, ses innovations techniques
+            et son impact sur les infrastructures réseaux.
+          </p>
+
+          <div class="tech-tags">
+            <span class="stech">Satellite LEO</span>
+            <span class="stech">Phased Array</span>
+            <span class="stech">Low latency</span>
+            <span class="stech">Déploiement France</span>
+            <span class="stech">5G vs Starlink</span>
+            <span class="stech">Cybersécurité spatiale</span>
+          </div>
+
+          <!-- Section articles à remplir -->
+          <h4 style="color: var(--t1); margin-top: 1.5rem; font-weight: 500;">📰 Articles & actualités</h4>
+          <div class="veille-articles">
+            <div class="veille-article">
+              <div class="date">📅 À venir</div>
+              <div class="title">Espace réservé pour vos articles</div>
+              <div class="summary">Ajoutez ici vos résumés d'articles, analyses et veille sur Starlink.</div>
+            </div>
+            <div class="veille-article">
+              <div class="date">📅 À venir</div>
+              <div class="title">Comparaisons et analyses techniques</div>
+              <div class="summary">Performance, latence, débit, couverture... à documenter.</div>
+            </div>
+          </div>
+
+          <p class="veille-note">
+            📡 <strong>Espace de veille à compléter</strong> — Cette section est destinée à rassembler vos
+            recherches, articles et analyses sur l'évolution de Starlink, ses technologies (phased array,
+            inter-satellite links, terminaux utilisateurs), ses déploiements en France et en Europe,
+            ainsi que les enjeux de cybersécurité et de régulation.
+          </p>
         </div>
       </div>
     </section>
@@ -576,8 +616,8 @@
           desc: "Au cours de cette sixième semaine de stage, j'ai poursuivi le développement de mon script ainsi que de mon playbook. J'ai également participé à plusieurs installations avec ma tutrice et réalisé différentes mises en production (MEP), notamment concernant les tables. Cette semaine m'a permis d'approfondir mes connaissances en scripting et de mieux comprendre les différentes étapes de mise en œuvre des procédures techniques." 
         },
         { 
-          title: "Semaine 7 — Bilan et documentation", 
-          desc: "Rédaction des documentations techniques internes, présentation des réalisations à l'équipe, évaluation de stage et perspectives." 
+          title: "Semaine 7 — Finalisation, présentation & immersion réseau", 
+          desc: "▪️ Finalisation du script Ansible : aboutissement du projet de stage.\n▪️ Présentation du projet et du script à l'équipe (retour d'expérience et démonstration).\n▪️ Mise en immersion avec l'équipe réseau du CTI : présentation de l'infrastructure réseau, de son fonctionnement et des bonnes pratiques.\n▪️ Visite de la salle des serveurs : découverte de l'architecture physique, du câblage, des équipements et de leur maintenance.\n▪️ Présentation des méthodes de travail de l'équipe réseau (organisation, outils, supervision).\n▪️ Clôture du stage et échanges avec l'équipe sur les perspectives." 
         }
       ];
       const weekNav = document.getElementById('weekNav');
